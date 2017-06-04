@@ -7,6 +7,8 @@ def parse(clase, ruta_archivo):
         grafo.eje(*map(int, archivo.readline().split()))
     return grafo
 
+
+
 class Digrafo(object):
     # Inicializador
 	def __init__(self, vertices):
@@ -44,3 +46,14 @@ class DigrafoConPeso(Digrafo):
 
 	def peso(self, u, v):
 		return pesos[(u,v)]
+
+def generarGrafo(n):
+	from random import seed, randint
+	seed()
+	tope = 10**3
+	grafo = DigrafoConPeso(n)
+	for i in xrange(n):
+		for j in xrange(n):
+			if i != j:
+				grafo.eje(i, j, randint(1, tope))
+	return grafo
