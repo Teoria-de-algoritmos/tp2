@@ -7,7 +7,7 @@ from GrafoUtils import generarGrafo
 quant = input("Ingrese la cantidad de monedas:")
 G = generarGrafo(quant)
 
-print("Vertices: "+str(k1.grafo.vertices()))
+print("Vertices: "+str(G.vertices()))
 
 start = timer()
 D = Dijkstra(G)
@@ -26,7 +26,7 @@ start = timer()
 F = FloydWarshall(G)
 end = timer()
 
-print("FlkoydWarshall: "+str((end - start)*1000)+" mseg")
+print("FloydWarshall: "+str((end - start)*1000)+" mseg")
 
 print D.distancia()
 print B.distancia()
