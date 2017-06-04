@@ -45,7 +45,7 @@ class DigrafoConPeso(Digrafo):
 		super(DigrafoConPeso, self).eje(u,v)
 
 	def peso(self, u, v):
-		return pesos[(u,v)]
+		return self.pesos[(u,v)]
 
 def generarGrafo(n):
 	from random import seed, randint
