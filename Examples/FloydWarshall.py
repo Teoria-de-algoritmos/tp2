@@ -1,5 +1,3 @@
-from GrafoUtils import Digrafo
-
 class FloydWarshall:
 
     def __init__(self, grafo):
