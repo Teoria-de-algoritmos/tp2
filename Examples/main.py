@@ -1,6 +1,7 @@
 # Ejemplo
 from timeit import default_timer as timer
-import BellmanFord, FloydWarshall, Dijkstra, GrafoUtils
+import BellmanFord, FloydWarshall, Dijkstra
+from GrafoUtils import generarGrafo
 
 
 quant = input("Ingrese la cantidad de monedas:")
@@ -16,7 +17,7 @@ end = timer()
 print("Dijkstra: "+str((end - start)*1000)+" mseg")
 
 start = timer()
-B = BellamFord(G)
+B = BellmanFord(G)
 end = timer()
 
 print("BellmanFord: "+str((end - start)*1000)+" mseg")
