@@ -1,10 +1,12 @@
 # Ejemplo
 from timeit import default_timer as timer
-import BellmanFord, FloydWarshall, Dijkstra
+from BellmanFord import BellmanFord
+from Dijkstra import Dijkstra
+from FloydWarshall import FloydWarshall
 from GrafoUtils import generarGrafo
 
 
-quant = input("Ingrese la cantidad de monedas:")
+quant = input("Ingrese la cantidad de monedas: ")
 G = generarGrafo(quant)
 
 print("Vertices: "+str(G.vertices()))
