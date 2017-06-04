@@ -10,7 +10,7 @@ class Dijkstra:
 			self.distancias[i][i] = 0
 			cola = sorted([(self.distancias[i][j], j) for j in xrange(grafo.vertices())])
 			while cola:
-				actual = cola.pop(0)
+				actual = cola.pop(0)[1]
 				for siguiente in xrange(self.grafo.vertices()):
 					nuevaDistancia = self.distancias[i][actual] + self.distancias[actual][siguiente]
 					if nuevaDistancia < self.distancias[i][siguiente]:
