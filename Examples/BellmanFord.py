@@ -11,15 +11,15 @@ class BellamFord:
 	        for _ in xrange(self.grafo.vertices() - 1):
 	            for u in xrange(self.grafo.vertices()):
 	            	for v in xrange(self.grafo.vertices()):
-						w = grafo.peso(u,v)
+				w = grafo.peso(u,v)
 		                if dist[u] != float("Inf") and dist[u] + w < dist[v]:
 		                        dist[v] = dist[u] + w
 	        for u in xrange(self.grafo.vertices()):
 		        for v in xrange(self.grafo.vertices()):
 		        	w = self.grafo.peso(u,v)
-	                if dist[u] != float("Inf") and dist[u] + w < dist[v]:
-	                        print "El grafo contiene un ciclo de peso negativo"
-	                        return
+	               		if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+					print "El grafo contiene un ciclo de peso negativo"
+					return
 	        self.distancias.append(dist) 
 
 	 def distancia(self, u, v):
