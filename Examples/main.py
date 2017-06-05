@@ -7,6 +7,8 @@ from GrafoUtils import generarGrafo
 
 
 quant = input("Ingrese la cantidad de monedas: ")
+u = input("Ingrese u: ")
+v = input("Ingrese v: ")
 G = generarGrafo(quant)
 
 print("Vertices: "+str(G.vertices()))
@@ -30,7 +32,6 @@ end = timer()
 
 print("FloydWarshall: "+str((end - start)*1000)+" mseg")
 
-print D.distancia()
-print B.distancia()
-print F.distancia()
-
+print "Dijkstra distance: "+str(D.distancia(u,v))
+print "BellmanFord distance: "+str(B.distancia(u,v))
+print "FloydWarshall distance: "+str(F.distancia(u,v))
